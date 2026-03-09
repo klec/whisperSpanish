@@ -1,0 +1,14 @@
+services:
+  whisper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        WHISPER_MODEL: ${WHISPER_MODEL:-medium}
+    image: whisper-transcriber:latest
+    volumes:
+      - ${HOME}/spanishResume/src:/spanishResume/src
+      - ${HOME}/spanishResume/resume:/spanishResume/resume
+      - ${HOME}/spanishResume/processing:/spanishResume/processing
+    environment:
+      - WHISPER_MODEL_PATH=/app/node_modules/whisper-node/lib/whisper.cpp/models/ggml-${WHISPER_MODEL:-medium}.bin
