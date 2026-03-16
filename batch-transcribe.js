@@ -8,7 +8,7 @@ const cliArgs = process.argv.slice(2);
 const srcDir = cliArgs[0] || '/spanishResume/src';
 const outDir = cliArgs[1] || '/spanishResume/resume';
 const processingDir = cliArgs[2] || '/spanishResume/processed';
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyAEdF-Er7YDtUoKPscmak68XTD7Yt_U_Ko';
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || 'AIzaSyAEdF-Er7YDtUoKPscmak68XTD7Yt_U_CO';
 const GEMINI_MODEL = 'gemini-2.5-flash';
 const TRANSLATE_TO = 'ru';
 
